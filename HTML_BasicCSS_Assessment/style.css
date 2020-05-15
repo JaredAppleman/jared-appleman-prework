@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: lightskyblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+  color:white; 
+  font-weight: bold;
+}
+
+.content{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.site-name{
+  font-weight:bold;
+  color:white;
+  font-size: 75px;
+  padding: 10px 0px 10px 0px;
+}
+
+.button{
+  font-weight: bold;
+  color: white;
+  display:inline-block;
+  border: 2px solid white;
+  padding: 3px 5px 3px 5px;
+}
+
