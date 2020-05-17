@@ -1,0 +1,32 @@
+.navigation{
+    background-color: gray;
+    text-align: center;
+}
+
+.content{
+    margin: 20px 0 150px 0;
+    overflow: auto;
+}
+
+.left-box{
+    background-color: blue;
+    width: 50%;
+    float: left;
+}
+
+.right-box{
+    background-color: red;
+    width: 25%;
+    float: right;
+}
+
+
+.left-box, .right-box{
+    text-align: center;
+    padding: 150px 0 150px 0;
+}
+
+.footer{
+    background-color: green;
+    text-align: center;
+}
