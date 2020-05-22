@@ -22,8 +22,23 @@
 .navbar-brand a{
     color: #ffffff;
     background-color: #4aaaa5;
-    padding: 15px 15px 15px 15px;
+    padding: 18px 15px 18px 15px;
 }
+
+/* Special link CSS: hover, |, ... */
+.nav-item:after{
+    content: '|';
+}
+
+.nav-link{
+    display: inline-block;
+}
+
+a.nav-link:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
 
 /* ################################# General #########################*/
 
@@ -57,6 +72,7 @@ body{
 
 /* hr elements*/
 hr{
+    height: 2px;
     background-color: #dddddd;
     margin-top: 0px;
 }
@@ -84,6 +100,11 @@ p, a{
 img.text-picture{
     float: left;
     padding-right: 15px;
+}
+
+/* Contact Page, Submit Button spacing */
+form button{
+    margin-bottom: 10px;
 }
 
 /* ################## FOOTER CSS ################ */
@@ -121,5 +142,9 @@ footer{
     }
     .navbar-brand{
         margin: 0 auto;
+    }
+
+    .nav-item:after{
+        content: none;
     }
 }
