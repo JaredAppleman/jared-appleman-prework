@@ -102,9 +102,19 @@ img.text-picture{
     padding-right: 15px;
 }
 
-/* Contact Page, Submit Button spacing */
+/* Submit Button spacing on contact page */
 form button{
     margin-bottom: 10px;
+}
+
+/* Banner spacing on portfolio page */
+.banner{
+    position: relative;
+    bottom: 50px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+
 }
 
 /* ################## FOOTER CSS ################ */
