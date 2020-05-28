@@ -1,0 +1,8 @@
+body{
+    background-image: url("../images/paw-background.jpg");
+}
+p{
+    background-color: green;
+    color:orange;
+    font-weight: bold;
+}
