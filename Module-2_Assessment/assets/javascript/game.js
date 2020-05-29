@@ -2,6 +2,9 @@ const letters_guessed_block = document.querySelector('#letters_Guessed_block');
 const guess_count_block = document.querySelector('#guess_count_block');
 const word_block = document.querySelector('#word_block');
 const win_block = document.querySelector('#win_block');
+const hint_block = document.querySelector('#hint_block');
+const image_HTML = document.querySelector('#img_block');
+const prev_word_block = document.querySelector('#prev_word_block');
 const music = document.querySelector('audio');
 const GUESSES = 7;
 let GAME = true;
@@ -10,18 +13,18 @@ let GAME = true;
 const wordObject = {
     raccoon: {
         word: 'raccoon',
-        imageUrl: '../images/raccoon.jpg',
-        hint: 'trash panda'
+        imageInfo: '<img src="assets/images/raccoon.jpg" alt="picture of animal" width="50%">',
+        hint: '"Trash panda"'
     },
     leopard: {
         word: 'leopard',
-        imageUrl: '../images/leopard.jpg',
-        hint: 'Rose cat'
+        imageInfo: '<img src="assets/images/leopard.jpg" alt="picture of animal" width="50%">',
+        hint: '"Rose cat"'
     },
     cheetah: {
         word: 'cheetah',
-        imageUrl: '../images/cheetah.jpg',
-        hint: 'speedy boi'
+        imageInfo: '<img src="assets/images/cheetah.jpg" alt="picture of animal" width="50%">',
+        hint: '"Speedy boi"'
     }
 
 };
@@ -38,6 +41,9 @@ const gameObject = {
     start: function(){
         if (this.wordList.length === 0){
             GAME = false;
+            music.innerHTML = '<source src="assets/music/coffin-dance-music.mp3" type="audio/mpeg"></source>'
+            music.load()
+            music.play()
             alert("Out of Words, thanks for playing UwU")
         }
         else {
@@ -50,6 +56,7 @@ const gameObject = {
             //set variables to page
             this.guesses_left = GUESSES
             this.letters_guessed = ''
+            hint_block.innerText = wordObject[this.currentWord].hint
             word_block.innerText = this.blank_word;
             guess_count_block.innerText = this.guesses_left;
             win_block.innerText = this.wins;
@@ -66,7 +73,7 @@ const gameObject = {
     },
 
     hangman: function(key){
-        //music.play()
+        music.play()
         key = key.toLowerCase()
         if (this.isValidGuess(key)){
             console.log('okay')
@@ -85,10 +92,20 @@ const gameObject = {
         if (this.blank_word.includes('_') === false){
             this.wins = this.wins + 1;
             win_block.innerText = this.wins
+            music.innerHTML = '<source src="assets/music/bongo-cat_dance-monkey.mp3" type="audio/mpeg"></source>'
+            music.load()
+            music.play()
+            image_HTML.innerHTML = wordObject[this.currentWord].imageInfo
+            prev_word_block.innerText = wordObject[this.currentWord].word
             alert('win')
             this.start()
         }
         else if (this.guesses_left === 0){
+            music.innerHTML = '<source src="assets/music/bongo-cat_see-you-again.mp3" type="audio/mpeg"></source>'
+            music.load()
+            music.play()
+            image_HTML.innerHTML = wordObject[this.currentWord].imageInfo
+            prev_word_block.innerText = wordObject[this.currentWord].word
             alert('loss')
             this.start()
         }

@@ -5,12 +5,28 @@ body{
     background-color: white;
 }
 p{
-    color:orange;
+    color: black;
     font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 16px;
 }
 
 .header{
     width:100%;
+    color: orange;
+}
 
+.site_name{
+    margin: 0 auto;
+    font-family: 'Piedra',cursive;
+    font-size: 4em;
 
+}
+.main-column{
+    text-align: center;
+    margin: 0 auto;
+}
+#img_block{
+    width: 100%;
+    margin: 0 auto;
 }

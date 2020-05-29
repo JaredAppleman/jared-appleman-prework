@@ -2,50 +2,73 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HangMan</title>
-  <link rel="stylesheet" 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HangMan</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" 
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
-   <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<audio controsl>
-    <source src="assets/music/tryEverything.mp3" type="audio/mpeg">
-    Not supported
+<!-- Music -->
+<audio controls>
+    <source src="assets/music/try-everything.mp3" type="audio/mpeg">
 </audio>
+
 
 <body>
     <div class="container content">
+
+        <!-- Site Name Area-->
         <div class="row">
-            <p>HangMan</p>
+            <p class="site_name">HangMan: Animals</p>
         </div>
 
+        <!-- Main Content Area -->
         <div class="row">
-            <div class="col-sm-4">
 
+            <!-- Left Side Content-->
+            <div class="col-sm-4 main-column">
+
+                <!-- Current Word Info-->
                 <div class="row">
-                    <p id="hint"></p>
+                    <p class="header">Hint for Current Word: </p>
+                    <p id="hint_block"></p>
                 </div>
 
+                <!-- Prev Word Info -->
                 <div class="row">
-                    <p>This will be an image</p>
+                    <p class="header">Last Word: </p>
+                    <div id="img_block">
+                        <img src="assets/images/logo.png" alt="picture of animal" width="50%">
+                    </div>
+                    <p id="prev_word_block"></p>
                 </div>
 
+                <!-- Song Info -->
                 <div class="row">
-                    <p> Song playing</p>
+                    <p class="header"> Song playing:</p>
                 </div>
             </div>
 
-            <div class="col-sm-4">
 
+
+            <!-- Right Side Content-->
+            <div class="col-sm-4 main-column">
+
+                <!-- Instructions -->
                 <div class="row">
                     <p>Press any key to get started!</p>
                 </div>
 
+                <!-- Current Game Info -->
                 <div class="row">
                     <p class="header">Wins:</p>
                     <p id="win_block"></p>
