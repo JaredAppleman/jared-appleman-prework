@@ -13,8 +13,13 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<audio controsl>
+    <source src="assets/music/tryEverything.mp3" type="audio/mpeg">
+    Not supported
+</audio>
+
 <body>
-    <div class="container">
+    <div class="container content">
         <div class="row">
             <p>HangMan</p>
         </div>
@@ -42,20 +47,23 @@
                 </div>
 
                 <div class="row">
-                    <p>Wins:</p>
+                    <p class="header">Wins:</p>
+                    <p id="win_block"></p>
                 </div>
 
                 <div class="row">
-                    <p>Current Word: </p>
+                    <p class="header">Current Word: </p>
+                    <p id="word_block"></p>
                 </div>
 
                 <div class="row">
-                    <p>Number of Guesses Remaining: </p>
+                    <p class="header">Number of Guesses Remaining: </p>
+                    <p id=guess_count_block></p>
                 </div>
 
                 <div class="row">
-                    <p>Letters Already Guessed: </p>
-                    <p id="lettersGuessed">A,</p>
+                    <p class="header">Letters Already Guessed: </p>
+                    <p id="letters_Guessed_block"></p>
                 </div>
             </div>
 

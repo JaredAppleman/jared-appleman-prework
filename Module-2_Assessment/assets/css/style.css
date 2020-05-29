@@ -1,8 +1,16 @@
 body{
     background-image: url("../images/paw-background.jpg");
 }
+.content{
+    background-color: white;
+}
 p{
-    background-color: green;
     color:orange;
     font-weight: bold;
+}
+
+.header{
+    width:100%;
+
+
 }
