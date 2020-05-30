@@ -3,6 +3,7 @@ body{
 }
 .content{
     background-color: white;
+    border: 2px solid orange;
 }
 p{
     color: black;
